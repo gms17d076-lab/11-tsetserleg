@@ -1,129 +1,158 @@
-# 🏗️ СҮМЫН ХҮҮХДИЙН 11-Р ЦЭЦЭРЛЭГИЙН БАРИЛГЫН ИХ ЗАСВАРЫН ТӨСӨЛ
-> **Төслийн нэр:** Цэцэрлэгийн гадна фасад болон дээвэр шинэчлэх төсөл
-> **Байршил:** Дорноговь аймаг, Сайншанд сум
-> **Огноо:** 2026 он
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-р цэцэрлэгийн төсөл</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #ffe8f0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #444;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #ff4d94;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: white;
+            border: 2px solid #ff4d94;
+            color: #ff4d94;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 77, 148, 0.1);
+        }
+        .btn:hover {
+            background: #ff4d94;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 77, 148, 0.2);
+        }
+        .content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            text-align: left;
+            border: 1px solid #ffc2d1;
+            line-height: 1.6;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .budget-table td, .budget-table th {
+            border: 1px solid #eee;
+            padding: 8px;
+        }
+        .img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
 
----
+    <div class="container">
+        <h1>🏗️ 11-р Цэцэрлэгийн Төсөл</h1>
 
-## 🏫 ЦЭЦЭРЛЭГИЙН ТАНИЛЦУУЛГА
-Тус цэцэрлэг нь 2015 онд байгуулагдсанаас хойш 11 дэх жилдээ сургуулийн өмнөх боловсрол олгож байна.
-* **Хүчин чадал:** 7 бүлэг, 150 хүүхэд (Одоогийн байдлаар 234 хүүхэд суралцаж байна).
-* **Онцлог:** Дорноговь аймгийн хэмжээнд **тусгай хэрэгцээт (хөгжлийн бэрхшээлтэй)** хүүхдийн бүлэг ажиллуулдаг цорын ганц цэцэрлэг.
-* **Боловсон хүчин:** 31 багш ажилтантай.
+        <div class="btn" onclick="toggleContent('part1')">🏢 НЭГ. ТӨСЛИЙН НЭР</div>
+        <div id="part1" class="content">
+            Сайншанд сумын хүүхдийн 11-р цэцэрлэгийн барилгын их засварын төсөл.
+        </div>
 
----
+        <div class="btn" onclick="toggleContent('part2')">🎯 ХОЁР. ТӨСЛИЙН ЗОРИЛГО</div>
+        <div id="part2" class="content">
+            • Барилгын аюулгүй байдал, дулаан алдагдлыг багасгах.<br>
+            • Ашиглалтын хугацааг уртасгаж, үйлчилгээний чанарыг сайжруулах.<br>
+            • Хүүхдэд ээлтэй, өнгө үзэмжтэй орчин бүрдүүлэх.
+        </div>
 
-## 📂 ТӨСЛИЙН ДЭЛГЭРЭНГҮЙ (Хэсэг бүр дээр дарж үзнэ үү)
+        <div class="btn" onclick="toggleContent('part3')">📋 ГУРАВ. ТӨСЛИЙН ЗОРИЛТ</div>
+        <div id="part3" class="content">
+            1. Дээврийн материалыг шинэчилж, чийгнээс хамгаалах.<br>
+            2. Стандартын шаардлага хангасан материал ашиглах.<br>
+            3. Эцэг эхчүүдийн сэтгэл ханамжийг нэмэгдүүлэх.
+        </div>
 
-<details>
-<summary><b>НЭГ. ТӨСЛИЙН НЭР</b> (Дарж үзэх)</summary>
-<br>
-Сайншанд сумын хүүхдийн 11-р цэцэрлэгийн барилгын их засварын төсөл.
-</details>
+        <div class="btn" onclick="toggleContent('part5')">⚠️ ТӨСЛИЙН ХЭРЭГЦЭЭ (Зурагтай)</div>
+        <div id="part5" class="content">
+            <strong>5.1 Дээвэр:</strong> Дусаал гоожиж эрсдэл үүсгэсэн.
+            <div class="img-grid">
+                <img src="ЗУРГИЙН_LINK_1" alt="Дээвэр 1">
+                <img src="ЗУРГИЙН_LINK_2" alt="Дээвэр 2">
+            </div>
+            <br>
+            <strong>5.2 Гадна фасад:</strong> Хананд ан цав үүссэн.
+            <div class="img-grid">
+                <img src="ЗУРГИЙН_LINK_3" alt="Фасад 1">
+                <img src="ЗУРГИЙН_LINK_4" alt="Фасад 2">
+            </div>
+        </div>
 
-<details>
-<summary><b>ХОЁР. ТӨСЛИЙН ЗОРИЛГО</b> (Дарж үзэх)</summary>
-<br>
-1. Цэцэрлэгийн барилгын аюулгүй байдал, дулаан алдагдлыг багасгах.<br>
-2. Барилгын ашиглалтын хугацааг уртасгаж, сургуулийн өмнөх боловсролын үйлчилгээний чанарыг сайжруулах.<br>
-3. Хүүхдэд ээлтэй, эрүүл ахуйн шаардлага хангасан, өнгө үзэмж сайтай орчин бүрдүүлэх.<br>
-4. Байгууллагын гадаад өнгө төрх, орчны тохижилтыг сайжруулах.
-</details>
+        <div class="btn" onclick="toggleContent('part6')">💰 АРВАН ГУРАВ. ТӨСӨВ</div>
+        <div id="part6" class="content">
+            <table class="budget-table">
+                <tr style="background:#ff4d94; color:white;"><th>Зардал</th><th>Дүн</th></tr>
+                <tr><td>Ажиллах хүч</td><td>64,521,626₮</td></tr>
+                <tr><td>Материал</td><td>131,821,167₮</td></tr>
+                <tr><td><strong>НИЙТ ДҮН</strong></td><td><strong>304,920,783₮</strong></td></tr>
+            </table>
+        </div>
 
-<details>
-<summary><b>ГУРАВ. ТӨСЛИЙН ЗОРИЛТ</b> (Дарж үзэх)</summary>
-<br>
-* Дээврийн хуучирсан материалыг шинэчилж, ус чийг нэвтрэхээс хамгаалах.<br>
-* Байгальд ээлтэй, стандартын шаардлага хангасан материал ашиглах.<br>
-* Багш ажилчид, суралцагчид, эцэг эхчүүдийн сэтгэл ханамжийг нэмэгдүүлэх.
-</details>
+        <p style="font-size: 12px; color: #888; margin-top: 40px;">
+            Төсөл боловсруулсан: Ж.Цэндмаа <br> 2026 он
+        </p>
+    </div>
 
-<details>
-<summary><b>ДӨРӨВ. ТӨСЛИЙН ҮНДЭСЛЭЛ</b> (Дарж үзэх)</summary>
-<br>
-Цэцэрлэг нь хүүхдийг асрах, хамгаалах цогц байгууллага тул аюулгүй байдал нэн тэргүүнд тавигдана. Барилгын гадна фасад болон дээврийг шинэчилснээр дулаан хадгалалт сайжирч, барилгын үндсэн хийц хамгаалагдана.
-</details>
-
----
-
-## ⚠️ ТАВ. ТӨСЛИЙН ХЭРЭГЦЭЭ ШААРДЛАГА
-
-<details>
-<summary><b>5.1 Дээвэр</b> (Тайлбар болон зураг)</summary>
-<br>
-11 жилийн элэгдэлээс шалтгаалан дусаал гоожиж, анги танхимын эд хөрөнгөнд хохирол учруулж байна.
-<br><br>
-| Одоогийн зураг 1 | Одоогийн зураг 2 |
-| :---: | :---: |
-| <img src="ЗУРГИЙН_LINK_1" width="300"> | <img src="ЗУРГИЙН_LINK_2" width="300"> |
-</details>
-
-<details>
-<summary><b>5.2 Гадна фасад</b> (Тайлбар болон зураг)</summary>
-<br>
-Өнгө будаг муудаж, ханын ан цав үүссэн. Цонхны амалгаа муудсанаас дулаан алдалт их байна.
-<br><br>
-| Одоогийн зураг 1 | Одоогийн зураг 2 |
-| :---: | :---: |
-| <img src="ЗУРГИЙН_LINK_3" width="300"> | <img src="ЗУРГИЙН_LINK_4" width="300"> |
-</details>
-
-<details>
-<summary><b>5.3 Дулаан алдагдал</b> (Тайлбар болон зураг)</summary>
-<br>
-Өвлийн улиралд температур стандартын хэмжээнээс (18-22°C) доош орж, хүүхдүүд даарах, өвчлөх эрсдэл үүсэж байна.
-<br><br>
-| Одоогийн зураг 1 | Одоогийн зураг 2 |
-| :---: | :---: |
-| <img src="ЗУРГИЙН_LINK_5" width="300"> | <img src="ЗУРГИЙН_LINK_6" width="300"> |
-</details>
-
-<details>
-<summary><b>5.4 Сантехник</b> (Тайлбар болон зураг)</summary>
-<br>
-Паар муу халдаг, шугам бөглөрсөн, бохир хальдаг зэрэг ариун цэврийн ноцтой зөрчил үүсэж байна.
-<br><br>
-| Одоогийн зураг 1 | Одоогийн зураг 2 |
-| :---: | :---: |
-| <img src="ЗУРГИЙН_LINK_7" width="300"> | <img src="ЗУРГИЙН_LINK_8" width="300"> |
-</details>
-
-<details>
-<summary><b>5.5 Ангийн дотор засал</b> (Тайлбар болон зураг)</summary>
-<br>
-Мөөгөнцөр үүссэн, шал овойсон, хаалганууд эвдэрч дулаан алдалтад нөлөөлж байна.
-<br><br>
-| Одоогийн зураг 1 | Одоогийн зураг 2 |
-| :---: | :---: |
-| <img src="ЗУРГИЙН_LINK_9" width="300"> | <img src="ЗУРГИЙН_LINK_10" width="300"> |
-</details>
-
----
-
-## 💰 АРВАН ГУРАВ. ШААРДЛАГАTAЙ ТӨСӨВ
-
-| № | Зардлын нэр | Бүгд өртөг (Төгрөг) |
-| :-- | :--- | :--- |
-| 1 | Ажиллах хүчний зардал | 64,521,626 |
-| 2 | Материал | 131,821,167 |
-| 3 | Машин ашиглалт | 1,228,470 |
-| 4 | Тээвэр | 3,371,491 |
-| | **Шууд зардлын дүн** | **200,942,753** |
-| | Удирдлага зохион байгуулалт (58,6%) | 19,316,865 |
-| | Ашиг (15%) | 33,038,943 |
-| | **Барилга угсралтын дүн** | **253,298,561** |
-| | НӨАТ (10%) | 25,329,856 |
-| | Нормчлолын сан | 455,937 |
-| | **Нийт дүн** | **304,920,783** |
-
----
-
-## ✅ ТӨСЛИЙН ҮР ДҮН
-* Барилгын ашиглалтын аюулгүй байдал 100% хангагдана.
-* Эрчим хүчний алдагдал буурч, засвар үйлчилгээний зардал хэмнэгдэнэ.
-* Хүүхдийн өвчлөл буурч, суралцах таатай орчин бүрдэнэ.
-* Эцэг эхчүүдийн сэтгэл ханамж нэмэгдэнэ.
-
----
-**Төсөл боловсруулсан:** Сайшанд сумын 11 дүгээр цэцэрлэгийн эрхлэгч Ж.ЦЭНДМАА  
-*Сайншанд хот, 2026 он*
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                // Бусад нээлттэй байгааг хаах (заавал биш)
+                var allContent = document.getElementsByClassName('content');
+                for (var i = 0; i < allContent.length; i++) {
+                    allContent[i].style.display = 'none';
+                }
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
