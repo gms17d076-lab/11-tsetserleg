@@ -3,188 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11-р цэцэрлэгийн төсөл</title>
+    <title>Төслийн танилцуулга</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fdfcfb 0%, #ffe8f0 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
             margin: 0;
-            padding: 20px;
-            color: #444;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            color: #ff4d94;
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
-        .btn {
-            background: white;
-            border: 2px solid #ff4d94;
-            color: #ff4d94;
-            padding: 15px 20px;
-            margin: 10px 0;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 0;
             border-radius: 15px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            display: block;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 77, 148, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
-        .btn:hover {
-            background: #ff4d94;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 77, 148, 0.2);
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 харьцаа */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         .content {
-            display: none;
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: -5px;
+            padding: 25px;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .stats {
+            background: #e1f5fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #0277bd;
+        }
+        p {
             margin-bottom: 15px;
-            text-align: left;
-            border: 1px solid #ffc2d1;
-            line-height: 1.6;
-            animation: fadeIn 0.5s ease;
+            text-align: justify;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .budget-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-        .budget-table td, .budget-table th {
-            border: 1px solid #eee;
-            padding: 8px;
-        }
-        .img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .img-grid img {
-            width: 100%;
+        .footer-link {
+            display: block;
+            text-align: center;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
             border-radius: 8px;
-            border: 1px solid #ddd;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .footer-link:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>🏗️ 11-р Цэцэрлэгийн Төсөл</h1>
-
-        <div class="btn" onclick="toggleContent('part1')">🏢 ЦЭЦЭРЛЭГИЙН ТАНИЛЦУУЛГА</div>
-        <div id="part1" class="content">
-            Цэцэрлэг анх 2015 онд  байгуулагдснаас хойш 11 дэхь жилдээ Сургуулийн өмнөх боловсрол олгох үйл ажиллагаагаа амжилттай зохион байгуулан ажиллаж  байна. Манай цэцэрлэг 7 бүлэг 150 хүүхдийн хүчин чадалтай. 
-2025-2026 оны хичээлийн жилд тус цэцэрлэгт 31 багш ажилтан ажиллаж нийт 7 бүлэгт 234 хүүхэд хөгжиж төлөвшиж байна.. Хамран сургах тойргоор Сайншанд сумын 3, 8 дугаар багийн  хүүхдүүдэд сургуулийн өмнөх боловсрол олгож байна. Мөн Дорноговь аймгийн хэмжээнд зөвхөн манай цэцэрлэг нь хөгжлийн бэрхшээлтэй буюу тусгай хэрэгцээт хүүхдүүдийн анги бүлэгтэй бөгөөд эцэг эхчүүдийг нь ажлаа хийх боломж нөхцөл боломжийг хангаж өгдөг. Нийт 36 хүүхдийг төгсгөж сургуульд сурч хөгжих буюу тэгш хамруулан сургах нөхцөлийг бүрдүүлэн ажилладаг.
-Багш нар нь боловсролын бакалавр, магистр, мэргэжлийн “Тэргүүлэх”, “Заах аргач” зэрэгтэй багш нар бөгөөд  туслах багш нар маань заах арга зүйн сургалтуудад хамрагдсан мэргэжлийн боловсон хүчнээр хангагдсан.
-
-     </div>
-
-        <div class="btn" onclick="toggleContent('part1')">🏢 НЭГ. ТӨСЛИЙН НЭР</div>
-        <div id="part1" class="content"> Сайншанд сумын хүүхдийн 11-р цэцэрлэгийн барилгын их засварын төсөл.
-        </div>
-
-        <div class="btn" onclick="toggleContent('part2')">🎯 ХОЁР. ТӨСЛИЙН ЗОРИЛГО</div>
-        <div id="part2" class="content">
-            • Барилгын аюулгүй байдал, дулаан алдагдлыг багасгах.<br>
-            • Ашиглалтын хугацааг уртасгаж, үйлчилгээний чанарыг сайжруулах.<br>
-            • Хүүхдэд ээлтэй, өнгө үзэмжтэй орчин бүрдүүлэх.
-            • Байгууллагын гадаад өнгө төрөх, орчны тохижилтыг сайжруулах.
-        </div>
-
-        <div class="btn" onclick="toggleContent('part3')">📋 ГУРАВ. ТӨСЛИЙН ЗОРИЛТ</div>
-        <div id="part3" class="content">
-            1. Дээврийн материалыг шинэчилж, чийгнээс хамгаалах, дулаалга сайжруулах.<br>
-            2. Байгальд ээлтэй, хоргүй, стандартын шаардлага хангасан материал ашиглах.<br>
-            3. Сургуулийн өмнөх боловсролын байгууллагын орчны чанар,  багш ажилчид болон суралцагчид, эцэг эхчүүдийн сэтгэл ханамжийг нэмэгдүүлэх
-        </div>
+<div class="container">
+    <div class="video-container">
+        <iframe src="copy_DEE778D8-A480-4AEF-9ADD-B8194F151D6F.mp4" allowfullscreen></iframe>
         
-        <div class="btn" onclick="toggleContent('part3')">📋 ДӨРӨВ. ТӨСЛИЙН ҮНДЭСЛЭЛ</div>
-        <div id="part3" class="content">
-            Цэцэрлэг нь 2 наснаас сургуульд элсэх хүртэл насны хүүхдийг асрах, хамгаалах, хөгжүүлэх цогц үйл ажиллагаа бүхий сургалтын байгууллага юм. Боловсролын стандарт, хөтөлбөрийг хэрэгжүүлэхэд шаардагдах материаллаг нөхцлийг бүрдүүлэхэд хүүхдийн аюулгүй байдлыг хангасан ая тухтай, таатай сургалтын орчныг бүрдүүлэн ажиллах шаардлагатай юм.  Цэцэрлэгийн барилгын гадна фасад болон дээврийг иж бүрэн шинэчлэн сайжруулснаар, хүүхдэд аюулгүй, эрүүл ахуйн шаардлага хангасан, дулаан хадгалалт сайтай, өнгө үзэмжтэй орчныг бүрдүүлэхэд оршино. Мөн барилгын ашиглалтын хугацааг уртасгах, байгальд ээлтэй материал ашиглан дулаан алдагдал, ус чийгний нэвчилтийг багасгах, байгууллагын гадаад өнгө төрх, орчны тохижилтыг сайжруулж, эцэг эхчүүд болон олон нийтийн итгэл, сэтгэл ханамжийг нэмэгдүүлэхэд чиглэнэ.
         </div>
+
+    <div class="content">
+        <h2>САЙНШАНД СУМЫН ХҮҮХДИЙН  11-Р ЦЭЦЭРЛЭГИЙН ИХ ЗАСВАРЫН ТӨСӨЛ</h2>
         
-        <div class="btn" onclick="toggleContent('part5')">⚠️ ТАВ. ТӨСЛИЙН ХЭРЭГЦЭЭ (Зурагтай)</div>
-        <div id="part5" class="content">
-            <strong>5.1 Дээвэр:</strong> 11 жилийн элэгдэлээс шалтгаалан   дээврээс цас, бороо орох бүрт ус чийг нэвчиж дусаал гоожиж анги танхимуудын эд хөрөнгөнд хохирол учирч  мөн үндсэн хийцэд нөлөөлж  өндөр эрсдэл үүсгээд байгаа юм. Энэ нь барилгын ашиглалтын аюулгүй байдалд сөргөөр нөлөөлөхөөс гадна дулаан алдагдаж цан чийг үүссэний улмаас  хананд мөөгөнцөр их үүсдэг. Ялангуяа гал тогоо хэсэг болон 2 давхарын ангиудад үүсгэж байгаа.  
-            <div class="img-grid">
-                <img src="ЗУРГИЙН_LINK_1" alt="Дээвэр 1">
-                <img src="ЗУРГИЙН_LINK_2" alt="Дээвэр 2">
-            </div>
-            <br>
-
-                    <strong>5.2 Гадна фасад:</strong> Цэцэрлэгийн барилга ашиглалтад орсноос хойш удаан хугацаа өнгөрч элэгдэл хорогдол их явагдсантай холбоотойгоор гадна фасадны өнгө будаг муудаж, ханын ан цав үүссэн. Цонхнуудын амалгаа, резинэн зөөлөвчүүд муудаж дулаан алдалт үүсгээд байгаа юм.  Цэцэрлэгийн гаднах орчин өнгө үзэмжийн хувьд будаг нь арилж өнгө үзэмж алдагдан, цууралт их үүссэн. Иймээс барилгын гадна фасадыг  иж бүрэн шинэчилж, ан цавыг арилгаж сайжруулан, байгальд ээлтэй, эрүүл ахуйн шаардлага хангасан материал ашиглах зайлшгүй хэрэгцээ үүсээд байна.
-            <div class="img-grid">
-                <img src="ЗУРГИЙН_LINK_3" alt="Фасад 1">
-                <img src="ЗУРГИЙН_LINK_4" alt="Фасад 2">
-            </div>
-        </div>
-                <strong>5.3 Дулаан алдагдал:</strong> Хана, цонхны дулаалга муудсанаас  өвлийн улиралд орчны стандарт (18-220С) хэмээс доош орж хүүхдүүд зузаан цамц өмдтэйгээ өдөржин байх нь хичээл сургалтын үйл ажиллагаа болон сурч хөгжихөд саад учирч, даарснаас ханиад томууны өвчлөл нэмэгдэж хүүхдийн эрүүл мэндэд сөрөг нөлөө үзүүлэхээс гадна, тав тухтай, таатай  орчин бүрдэхгүй байгаа юм.
-            <div class="img-grid">
-                <img src="ЗУРГИЙН_LINK_3" alt="Фасад 1">
-                <img src="ЗУРГИЙН_LINK_4" alt="Фасад 2">
-            </div>
-        </div>
-                    <strong>5.4 Сантехник:</strong> Өвлийн улиралд ангиудын болон бүх өрөө тасалгааны паар муу халдаг учраас заримдаа цахилгаан халаагуур ашигладаг, зарим ангийн паар хагарч ус алдаж зэвэрсэн. Ангиудын шугам бөглөрч бохирын хоолой задарч  хальдаг зэрэг нь ариун цэвэр, эрүүл ахуйн ноцтой зөрчил үүсгэж ажиллах, суралцах орчинд сөргөөр нөлөөлөхөөс гадна эдийн засгийн зарлага их гарах нөхцөл бүрдүүлж байна. 
-            <div class="img-grid">
-                <img src="ЗУРГИЙН_LINK_3" alt="Фасад 1">
-                <img src="ЗУРГИЙН_LINK_4" alt="Фасад 2">
-            </div>
-        </div>
-                        <strong>5.5 5.5	Ангийн дотор засал: :</strong> Дээврээс ус гоожсноос болж таазны шохой эмүльс ховхорч унасан, хана дагаж ус гоожсноос үүдэн мөөгөнцөр үүссэн,  жил болгон урсгал засвар хийдэг ч дулаан алдагдалтын улмаас дахин мөөгөнцөр жил бүр үүсдэг.  Анги бүлгүүдийн паркетин шал элэгдэж зай завсар их гарсан. Зай завсраар нь хог, тоос шороо  их хуримтлагдан бужигнаж эрүүл ахуйд сөргөөр нөлөөлж байна. Дээврээс болон сантехникийн шугамнаас алдсан ус нь шалны завсраар нэвчиж паркетин шал хөөж овойсон, доороосоо мөөгөнцөрдөх нөхцөл бүрдсэн. Иймд стандартын шаардлага хангасан чийгэнд тэсвэртэй цэвэрлэхэд хялбар шалны материалаар солих шаардлагатай байна.  Анги танхимын хаалганууд ашиглалтын явцад элэгдэж үндсэн хийц нь муудсан. Өмнө нь засаж сайжруулах зорилгоор хуулга нааж түр зуур шийдвэрлэж байсан боловч одоогийн байдлаар хуулга нь хууларч хаалганы гадаргуу дахин гэмтэж цөмөрсөн тул дахин янзлах боломжгүй болсон байна. Хаалганууд хаагдах нээгдэхэд хүндрэлтэй болсоноос үүдэн анги танхимын дулаан алдалтанд нөлөөлж байна. Тиймээс одоо байгаа модон хаалгануудыг сольж чанар стандартын шаардлага хангасан шинэ хаалгаар шинэчлэх шаардлагатай байна. 
-            <div class="img-grid">
-                <img src="ЗУРГИЙН_LINK_3" alt="Фасад 1">
-                <img src="ЗУРГИЙН_LINK_4" alt="Фасад 2">
-            </div>
+        <div class="stats">
+            Нийт төсөвт өртөг: 1.079.010.903₮
         </div>
 
-        <div class="btn" onclick="toggleContent('part6')">💰 АРВАН ГУРАВ. ТӨСӨВ</div>
-        <div id="part6" class="content">
-            <table class="budget-table">
-                <tr style="background:#ff4d94; color:white;"><th>Зардал</th><th>Дүн</th></tr>
-                <tr><td>Ажиллах хүч</td><td>64,521,626₮</td></tr>
-                <tr><td>Материал</td><td>131,821,167₮</td></tr>
-                <tr><td><strong>НИЙТ ДҮН</strong></td><td><strong>304,920,783₮</strong></td></tr>
-            </table>
-        </div>
-
-        <p style="font-size: 12px; color: #888; margin-top: 40px;">
-            Төсөл боловсруулсан: Ж.Цэндмаа <br> 2026 он
-        </p>
-    </div>
-
-    <script>
-        function toggleContent(id) {
-            var content = document.getElementById(id);
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                // Бусад нээлттэй байгааг хаах (заавал биш)
-                var allContent = document.getElementsByClassName('content');
-                for (var i = 0; i < allContent.length; i++) {
-                    allContent[i].style.display = 'none';
-                }
-                content.style.display = "block";
-            }
-        }
-    </script>
-</body>
-</html>
+        <p><strong>ТӨСЛИЙН ЗОРИЛГО:</strong> Цэцэрлэгийн барилгын  элэгдэл, гэмтлийг засварлан шинэчлэх, инженерийн шугам сүлжээг сайжруулах замаар хүүхдийн эрүүл, аюулгүй, тав тухтай орчинд сурч хөгжих нөхцөлийг бүрдүүлэх, сургалтын орчны чанар, хүртээмжийг нэмэгдүүлэх зорилготой.
